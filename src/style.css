@@ -12,13 +12,19 @@ body {
 }
 body {
     font-family: 'Open Sans';
+    background: url(./bg-img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* background-color: black; */
+    color: white;
 }
 
 .flex-container {
     padding: 30px;
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -31,4 +37,24 @@ body {
 .city {
     font-size: 2rem;
     font-weight: 600;
+}
+
+input {
+    outline: none;
+    font-size: 16px;
+    padding: 10px 16px;
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+}
+input::placeholder {
+    color: rgb(216, 208, 208);
+}
+input:focus::placeholder {
+    color: rgb(185, 179, 179);
+}
+button {
+    display: none;
+
 }
