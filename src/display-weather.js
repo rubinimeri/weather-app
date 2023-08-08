@@ -40,6 +40,14 @@ const displayCondition = async (data) => {
   condition.textContent = conditionValue;
 };
 
+(function addDefaultLocation() {
+  const cityData = processWeatherData('Skopje');
+  displayDegrees(cityData);
+  displayLocationName(cityData);
+  displayDetails(cityData);
+  displayCondition(cityData);
+}());
+
 // Add event listener to form
 form.addEventListener('submit', (e) => {
   e.preventDefault();
