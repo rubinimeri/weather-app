@@ -14,5 +14,3 @@ export default async function processWeatherData(location) {
 
   return data;
 }
-
-console.log(processWeatherData('skopje'));

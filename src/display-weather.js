@@ -60,5 +60,4 @@ form.addEventListener('submit', (e) => {
   displayLocationName(cityData);
   displayDetails(cityData);
   displayCondition(cityData);
-  /* console.log(cityData); */
 });
