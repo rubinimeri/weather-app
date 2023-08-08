@@ -24,8 +24,11 @@ body {
 
 .temp {
     font-size: 7rem;
+    margin: -25px 0;
+    font-weight: 900;
 }
 
 .city {
     font-size: 1.8rem;
+    font-weight: 600;
 }

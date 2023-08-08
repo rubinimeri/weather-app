@@ -19,6 +19,18 @@ const displayLocationName = async (data) => {
   location.textContent = `${response.location.name}, ${response.location.country}`;
 };
 
+// Display humidity, wind and 'feels like'
+const displayDetails = async (data) => {
+  const response = await data;
+  const humidity = document.querySelector('.humidity');
+  const wind = document.querySelector('.wind');
+  const feelsLike = document.querySelector('.feels-like');
+
+  humidity.textContent = `Humidity - ${response.current.humidity}%`;
+  wind.textContent = `Wind Speed - ${response.current.wind_kph}kmh`;
+  feelsLike.textContent = `Feels Like - ${response.current.feelslike_c}`;
+};
+
 // Add event listener to form
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -27,5 +39,6 @@ form.addEventListener('submit', (e) => {
   const cityData = processWeatherData(location);
   displayDegrees(cityData);
   displayLocationName(cityData);
+  displayDetails(cityData);
   /* console.log(cityData); */
 });
