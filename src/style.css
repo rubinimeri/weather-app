@@ -19,7 +19,18 @@ body {
     /* background-color: black; */
     color: white;
 }
-
+/* .copy {
+    display: none;
+} */
+.big {
+    fill: white;
+    width: 40px;
+    margin-bottom: 50px;
+}
+.small {
+    fill: white;
+    width: 16px;
+}
 .flex-container {
     padding: 30px;
     height: 100%;
@@ -39,6 +50,16 @@ body {
     font-weight: 600;
 }
 
+.feels-like {
+    display: inline-block;
+    margin-right: -4px;
+}
+p {
+    display: inline-block;
+    padding: 8px;
+    border-bottom: 1px solid white;
+    margin: 4px;
+}
 input {
     outline: none;
     font-size: 16px;

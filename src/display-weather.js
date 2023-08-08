@@ -2,6 +2,7 @@ import processWeatherData from './index';
 
 const form = document.querySelector('form');
 const search = document.getElementById('search');
+const celsiusBig = document.querySelector('.big');
 
 // Display temperature
 const displayDegrees = async (data) => {
@@ -9,6 +10,7 @@ const displayDegrees = async (data) => {
   const temp = document.querySelector('.temp');
 
   temp.textContent = tempValue.current.temp_c;
+  temp.append(celsiusBig);
 };
 
 // Display city and country name
