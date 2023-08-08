@@ -31,6 +31,15 @@ const displayDetails = async (data) => {
   feelsLike.textContent = `Feels Like - ${response.current.feelslike_c}`;
 };
 
+// Display weather condition
+const displayCondition = async (data) => {
+  const response = await data;
+  const condition = document.querySelector('.condition');
+  const conditionValue = response.current.condition.text;
+
+  condition.textContent = conditionValue;
+};
+
 // Add event listener to form
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -40,5 +49,6 @@ form.addEventListener('submit', (e) => {
   displayDegrees(cityData);
   displayLocationName(cityData);
   displayDetails(cityData);
+  displayCondition(cityData);
   /* console.log(cityData); */
 });
